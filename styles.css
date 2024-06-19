@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap");
+
+:root {
+  --body-background: #f3f3f3;
+  --group-color: #333131;
+  --button-background: #0095f6;
+  --link-color: #0095f6;
+  --button-color: #ffffff;
+  --not-account-background: #a0a0a0;
+  --label-switch: #000000;
+  --ball-switch: #c7c3c3;
+  --border: #d3d3d3;
+}
+
+.darker-mode:root {
+  --body-background: #000000;
+  --group-color: #a4a9aa;
+  --button-background: #1b1a1a94;
+  --link-color: #ffffff;
+  --button-color: #77b7e2;
+  --not-account-background: #090316;
+  --label-switch: #133b5c;
+  --ball-switch: #394042;
+  --border: #3d464d;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  text-decoration: none;
+  font-family: "Playwrite AU VIC", cursive;
+  font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+:root {
+  --akzent: #4799eb; /* blau */
+
+  --white: white;
+  --lightest: #ddd; /* hover und co */
+  --lighter: #999; /* txt */
+  --light: #555; /* grau time klicks */
+  --dark: #25282c; /* background */
+  --darker: #191c20; /* box */
+  --darkest: #111417; /* navbar tags */
+  --black: black;
+}
+
+body {
+  background: linear-gradient(
+    315deg,
+    var(--dark) 3%,
+    var(--dark) 38%,
+    var(--dark) 68%,
+    var(--darker) 98%
+  );
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: gradient 15s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.wave {
+  width: 100%;
+  height: 8rem;
+  background: var(--darkest);
+  border-radius: 1000% 1000% 0 0;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25rem;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5rem;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(1);
+  }
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: var(--body-background);
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.instagram-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  width: 60%;
+  height: 100vh;
+
+  position: relative;
+}
+
+.instagram-phone {
+  margin-left: -200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.instagram-phone img {
+  height: 35rem;
+}
+
+.instagram-continue {
+  margin-left: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 50%;
+  min-height: 34rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #25282c;
+  width: 100%;
+  padding: 1.3rem 0;
+  border: 1px solid #095b92;
+  box-shadow: 0px -2px 300px -85px rgba(0,0,255,1);
+
+  a {
+    color: #000000;
+    font-weight: 800;
+  }
+}
+
+.group:nth-child(1) {
+  min-height: 19rem;
+  margin-bottom: 1rem;
+}
+
+.instagram-logo {
+  margin-top: -90px;
+  width: 190px;
+}
+
+.instagram-login {
+  display: flex;
+  margin-top: -170px;
+  width: 80%;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  background-color: var(--button-background);
+  color: var(--button-color);
+  font-family: "Playwrite AU VIC", cursive;
+  padding: 5px;
+  border-radius: 4px;
+  column-gap: 50px;
+  .ins_logo {
+    width: 45px;
+    /* margin-left: -40px; */
+  }
+}
+
+.call {
+  font-family: "Playwrite AU VIC", cursive;
+}
+
+.telegram-login {
+  display: flex;
+  margin-top: -140px;
+  width: 80%;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  background-color: var(--button-background);
+  color: var(--button-color);
+  font-family: "Playwrite AU VIC", cursive;
+  padding: 5px;
+  border-radius: 4px;
+  column-gap: 50px;
+  .tg_logo {
+    width: 45px;
+  }
+}
+
+.not-account {
+  color: var(--not-account-background);
+}
+
+.link-blue {
+  color: var(--link-color);
+}
+
+.group a {
+  cursor: pointer;
+}
+
+.get-the-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 1.3rem 0;
+}
+
+.get-the-app p {
+  color: var(--ball-switch);
+}
+
+.download {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 1rem;
+}
+
+/* media queries */
+
+@media (max-width: 1024px) {
+  .instagram-wrapper {
+    width: 100%;
+    margin-left: -300px;
+  }
+}
+
+@media (max-width: 650px) {
+  .body {
+    background-color: var(--button-color);
+  }
+
+  .instagram-wrapper {
+    width: 160%;
+  }
+
+  .instagram-phone {
+    display: none;
+  }
+
+  .instagram-continue {
+    width: 100%;
+  }
+
+  .group {
+    border: 1px solid transparent;
+  box-shadow: 0px -2px 300px -85px rgba(0,0,255,1);
+
+  }
+}
+
+/* Button style */
+
+.dark-mode input {
+  opacity: 0;
+  position: absolute;
+}
+
+.dark-mode input:checked + label {
+  background-color: var(--label-switch);
+}
+
+.dark-mode input:checked + label .toggle {
+  transform: translateX(29px);
+}
+
+.dark-mode label {
+  top: 20px;
+  left: -10px;
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: black;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  position: relative;
+}
+
+.dark-mode label .toggle {
+  transition: transform 0.4s;
+}
+
+.dark-mode label img {
+  width: 25px;
+  padding: 0 0.1rem;
+}
+
+.dark-mode label .toggle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 0.2rem;
+
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    315deg,
+    rgb(25, 52, 170) 3%,
+    rgba(60, 132, 206, 1) 38%,
+    rgba(48, 238, 226, 1) 68%,
+    rgba(255, 25, 25, 1) 98%
+  );
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
