@@ -3,7 +3,7 @@
 :root {
   --body-background: #f3f3f3;
   --group-color: #333131;
-  --button-background: #0095f6;
+  --button-background: #000000;
   --link-color: #0095f6;
   --button-color: #ffffff;
   --not-account-background: #a0a0a0;
@@ -177,11 +177,11 @@ body {
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
-  background-color: #25282c;
+  background-color: #a1a1a1;
   width: 100%;
   padding: 1.3rem 0;
   border: 1px solid #095b92;
-  box-shadow: 0px -2px 300px -85px rgba(0,0,255,1);
+  box-shadow: 0px -2px 300px -70px rgba(0,0,255,1);
 
   a {
     color: #000000;
@@ -207,7 +207,7 @@ body {
   align-items: center;
   text-align: center;
   background-color: var(--button-background);
-  color: var(--button-color);
+  color: #fff;
   font-family: "Playwrite AU VIC", cursive;
   padding: 5px;
   border-radius: 4px;
@@ -248,8 +248,11 @@ body {
   color: var(--link-color);
 }
 
+
 .group a {
   cursor: pointer;
+  color: #fff;
+
 }
 
 .get-the-app {
